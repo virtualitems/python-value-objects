@@ -19,5 +19,5 @@ o = Weight(10)
 p = Weight(11)
 q = Weight(11)
 
-print(o.value, o == p, o == q, p == q)
+print(o == p, o == q, p == q)
 ```
