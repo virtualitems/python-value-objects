@@ -19,5 +19,10 @@ o = Weight(10)
 p = Weight(11)
 q = Weight(11)
 
-print(o == p, o == q, p == q)
+print('o ', o)
+print('p ', p)
+print('q ', q)
+print('o == p ', o == p)
+print('o == q ', o == q)
+print('p == q ', p == q)
 ```
