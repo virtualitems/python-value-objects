@@ -4,7 +4,7 @@ Abstract base class for python value objects.
 
 ## Usage
 
-Extends and implement the _is_valid_ method.
+Extend and implement the _is_valid_ method.
 
 ```
 class Weight(ValueObject):
