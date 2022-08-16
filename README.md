@@ -9,7 +9,7 @@ Extends and implement the _is_valid_ method.
 ```
 class Weight(ValueObject):
     def is_valid(self, value: int) -> bool:
-        return value >= 0
+        return isinstance(value, int) and value >= 0
 ```
 
 Equality example:
