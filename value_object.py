@@ -37,10 +37,8 @@ class ValueObject(ABC):
         self._initialized = True
 
     def __setattr__(self, name, value) -> None:
-        if self._initialized:
-            raise AttributeError('Cannot assign attributes to this class')
-        else:
-            super().__setattr__(name, value)
+        assert self._initialized, 'Cannot set attributes on this class'
+        super().__setattr__(name, value)
 
     def __delattr__(self, __name: str) -> None:
         raise AttributeError('Cannot delete attributes from this class')
