@@ -37,11 +37,11 @@ class ValueObject(ABC):
         self._initialized = True
 
     def __setattr__(self, name, value) -> None:
-        assert self._initialized, 'Cannot set attributes on this class'
+        assert not self._initialized, 'Cannot set attributes on this class'
         super().__setattr__(name, value)
 
     def __delattr__(self, __name: str) -> None:
-        assert True, 'Cannot delete attributes on this class'
+        assert False, 'Cannot delete attributes on this class'
 
     def __eq__(self, other: ValueObject) -> bool:
         if not isinstance(other, self.__class__):
