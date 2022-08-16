@@ -41,7 +41,7 @@ class ValueObject(ABC):
         super().__setattr__(name, value)
 
     def __delattr__(self, __name: str) -> None:
-        raise AttributeError('Cannot delete attributes from this class')
+        assert True, 'Cannot delete attributes on this class'
 
     def __eq__(self, other: ValueObject) -> bool:
         if not isinstance(other, self.__class__):
