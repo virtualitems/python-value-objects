@@ -30,8 +30,11 @@ class ValueObject(ABC, ImmutabeValue):
         """
 
     def __init__(self, value: Any):
+
         if not self.is_valid(value):
-            raise ValueError(f'not valid value for {self.__class__} value object')
+            raise ValueError(
+                f'not valid value for {self.__class__} value object')
+
         super().__init__()
 
     def __str__(self) -> str:
