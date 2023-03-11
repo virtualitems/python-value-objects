@@ -2,7 +2,7 @@
 Module that provides a value object abstraction for model data objects.
 
 * ValueObject   Value object abstraction.
-* ImmutabeValue Named tuple with a single value.
+* ImmutableValue Named tuple with a single value.
 """
 
 # syntax
@@ -17,10 +17,10 @@ from collections import namedtuple
 
 # Named tuple with a single value.
 # This is used to make the value object immutable.
-ImmutabeValue = namedtuple('ImmutabeValue', ('value',))
+ImmutableValue = namedtuple('ImmutableValue', ('value',))
 
 
-class ValueObject(ABC, ImmutabeValue):
+class ValueObject(ABC, ImmutableValue):
     """
     Represents a entity whose value is its identity.
     """
