@@ -12,7 +12,7 @@ long_description = (this_directory / "README.md").read_text()
 
 VERSION = '1.0.0'
 DESCRIPTION = 'Python value object implementation'
-PACKAGE_NAME = 'python-value-object'
+PACKAGE_NAME = 'pythonvalueobject'
 AUTHOR = 'github@virtualitems'
 EMAIL = 'virtualitemsuniverse@gmail.com'
 GITHUB_URL = 'https://github.com/virtualitems'
@@ -21,7 +21,7 @@ LICENSE = 'MIT'
 
 setup(
     name=PACKAGE_NAME,
-    packages=['package'],
+    packages=[PACKAGE_NAME],
     version=VERSION,
     license=LICENSE,
     description=DESCRIPTION,

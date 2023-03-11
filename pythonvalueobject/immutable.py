@@ -7,7 +7,6 @@ Module that provides a value object abstraction for model data objects.
 
 # syntax
 from __future__ import annotations
-from typing import Any
 
 # abstractions
 from abc import ABC, abstractmethod
@@ -16,6 +15,8 @@ from abc import ABC, abstractmethod
 from collections import namedtuple
 
 
+# Named tuple with a single value.
+# This is used to make the value object immutable.
 ImmutabeValue = namedtuple('ImmutabeValue', ('value',))
 
 
@@ -24,12 +25,12 @@ class ValueObject(ABC, ImmutabeValue):
     Represents a entity whose value is its identity.
     """
     @abstractmethod
-    def is_valid(self, value: Any) -> bool:
+    def is_valid(self, value) -> bool:
         """
         Checks if the value is valid for this value object.
         """
 
-    def __init__(self, value: Any):
+    def __init__(self, value):
 
         if not self.is_valid(value):
             raise ValueError(
